@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<!--
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName="DankPyon_TanningRack"]/researchPrerequisites</xpath>
+	</Operation>
+-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="DankPyon_SpinningWheel"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
+				</statOffsets>
+				<maxSimultaneous>2</maxSimultaneous>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="HandTailoringBench" or defName="ElectricTailoringBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		<value>
+			<li>DankPyon_SpinningWheel</li>
+		</value>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="DankPyon_TanningRack"]/comps</xpath>
+		<value>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor>
+				</statOffsets>
+				<maxSimultaneous>2</maxSimultaneous>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="TableButcher" or defName="ButcherSpot"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+		<value>
+			<li>DankPyon_TanningRack</li>
+		</value>
+	</Operation>
+</Patch>

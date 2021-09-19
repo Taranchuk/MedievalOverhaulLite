@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MedievalOverhaulLite.ModPatchSkipDef>
+		<defName>MOL_hhh</defName>
+		<label>test</label>
+		<description>tesss</description>
+    </MedievalOverhaulLite.ModPatchSkipDef>
+	
+</Defs>
