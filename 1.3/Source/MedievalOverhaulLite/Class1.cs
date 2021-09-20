@@ -36,13 +36,7 @@ namespace MedievalOverhaulLite
             {
                 modPackageID = MO_PackageID,
                 sourceFile = @"Replace_MineableMetals.xml",
-                patchesToSkip = new List<int> { 1 }
-            });
-            ModContentPack_Patches.patchesToSkip.Add(new ModPatchSkip
-            {
-                modPackageID = MO_PackageID,
-                sourceFile = @"Replace_MineableMetals.xml",
-                patchesToSkip = new List<int> { 1 }
+                patchesToSkip = new List<int> { 0, 1, 2, 3  }
             });
             ModContentPack_Patches.patchesToSkip.Add(new ModPatchSkip
             {
@@ -120,10 +114,11 @@ namespace MedievalOverhaulLite
                     {
                         var sourceFile = GetSourceFile(patchOperation);
                         var id = sourceFiles[sourceFile].IndexOf(patchOperation);
+                        Log.Message("Iterating: ID: " + id + " - " + patchOperation + " - " + sourceFile);
                         if (patchToSkip.sourceFile == sourceFile)
                         {
                             if (patchToSkip.patchesToSkip.Contains(id))
-                            {   //Log.Message("Skipping: ID: " + id + " - " + patchOperation + " - " + sourceFile);
+                            {   
                                 operationsToSkip.Add(patchOperation);
                             }
                         }
