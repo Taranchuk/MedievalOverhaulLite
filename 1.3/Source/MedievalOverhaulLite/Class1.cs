@@ -118,7 +118,8 @@ namespace MedievalOverhaulLite
                         if (patchToSkip.sourceFile == sourceFile)
                         {
                             if (patchToSkip.patchesToSkip.Contains(id))
-                            {   
+                            {
+                                //Log.Message("REmoving: " + id + " - " + patchOperation + " - " + sourceFile);
                                 operationsToSkip.Add(patchOperation);
                             }
                         }

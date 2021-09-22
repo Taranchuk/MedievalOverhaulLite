@@ -99,7 +99,6 @@
 		</value>
 	</Operation>
 	
-
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="DankPyon_TanningRack"]/comps</xpath>
 		<value>
